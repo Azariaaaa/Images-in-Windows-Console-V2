@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VqRG2SOwx9FCUyaiYzyvWlT0TowDTZKMovL8OR7zA+DaZ9yqCCa7srZrvma4VhA974wJ2DVf+Ptq9eHUKdK7ZQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\krust\\OneDrive\\Bureau\\C#\\ImagesInConsole\\ImagesInConsole.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\krust\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\krust\\.nuget\\packages\\system.drawing.common\\8.0.4\\system.drawing.common.8.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
