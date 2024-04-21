@@ -10,12 +10,23 @@ namespace ImagesInConsole
         public static string url = "https://pokeapi.co/api/v2/pokemon/";
         static void Main(string[] args)
         {
-            string pokemonName = AskForAPokemon();
-            string url = GetPokemonImage(pokemonName);
-            Bitmap image = DownloadImageFromUrl(url, pokemonName);
-            //Bitmap picture = new Bitmap("C:\\Users\\krust\\OneDrive\\Bureau\\C#\\ImagesInConsole\\007.png");
-            PixelWriter pw = new PixelWriter(image, 200);
-            pw.PictureAnalyzer();
+            while(true) 
+            {
+                Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
+                Console.SetBufferSize(Console.WindowWidth, Console.WindowHeight);
+                Console.SetCursorPosition(0, 0);    
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.White;   
+                string pokemonName = AskForAPokemon();
+                int accuracy = AskForAccuracy();
+                string url = GetPokemonImage(pokemonName);
+                Bitmap image = DownloadImageFromUrl(url, pokemonName);
+                //Bitmap picture = new Bitmap("C:\\Users\\krust\\OneDrive\\Bureau\\C#\\ImagesInConsole\\vert.jpg");
+                PixelWriter pw = new PixelWriter(image, accuracy);
+                pw.PictureAnalyzer();
+                Console.ReadLine();
+            }
+            
         }
 
         static string AskForAPokemon()
@@ -23,6 +34,13 @@ namespace ImagesInConsole
             Console.WriteLine("Veuillez entrer le nom d'un pokemon : ");
             string? pokemonName = Console.ReadLine();
             return pokemonName;
+        }
+
+        static int AskForAccuracy()
+        {
+            Console.WriteLine("Entrez une résolution (40 basse résolution, 200 très haute résolution) : ");
+            int accuracy = Convert.ToInt32(Console.ReadLine());
+            return accuracy;
         }
 
         static string GetPokemonImage(string pokemonName)

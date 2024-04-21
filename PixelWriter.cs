@@ -35,6 +35,7 @@ namespace ImagesInConsole
                     string G = valuesRGB[1];
                     string B = valuesRGB[2];
 
+                    //██
                     Console.Write("\x1b[38;2;" + R + ";" + G + ";" + B + "m██");
                 }
                 Console.WriteLine();
@@ -49,7 +50,7 @@ namespace ImagesInConsole
             int xEnd = xStart + TileWidth;
             int yEnd = yStart + TileHeight;
             int numberOfPixels = TileWidth * TileHeight;
-
+            
             for (int y = yStart; y < yEnd; y++)
             {
                 for (int x = xStart; x < xEnd; x++)
